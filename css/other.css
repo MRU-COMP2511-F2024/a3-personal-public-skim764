@@ -150,6 +150,12 @@ footer p {
         font-size: 0.9rem;
     }
 
+    section img {
+        border-radius: 10px; 
+        width: auto;
+        height: auto;
+    }
+
     footer {
         position: static;
     }
@@ -184,6 +190,8 @@ footer p {
 
     section img {
         border-radius: 10px; 
+        width: 30pc;
+        height: 10pc;
     }
 
     footer {
