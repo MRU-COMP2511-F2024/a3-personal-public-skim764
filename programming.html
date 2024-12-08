@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming - SoinKim</title>
+    <link rel="stylesheet" href="css/programming.css">
+</head>
+<body>
+    <header>
+        <h1>Programming</h1>
+        <section class="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="programming.html">Programing</a></li>
+                <li><a href="other.html">Other</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </section>
+    </header>
+    <main>
+        <section id="project" class="project">
+            <h2>ASCII Art Library Project</h2>
+            <p>
+                <strong>Objective:</strong> Develop a reusable C++ library for generating ASCII art,
+                implement advanced loop structures, and write the output to a file using command-line arguments.
+            </p>
+            <h3>Description</h3>
+            <p>
+                This project focused on creating a library of functions for ASCII art generation. The library
+                supports patterns like rectangles and triangles. A demonstration program was built to showcase the
+                library's capabilities.
+            </p>
+        </section>
+        <section id="key" class="key">
+            <h3>Key Functions</h3>
+            <pre>
+<code>// Draw a Rectangle
+void drawRectangle(int width, int height, char fill, char border, std::ostream &out) {
+    for (int i = 0; i < height; ++i) {
+        for (int j = 0; j < width; ++j) {
+            if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+                out << border;
+            } else {
+                out << fill;
+            }
+        }
+        out << std::endl;
+    }
+}
+            </code>
+            </pre>
+            <pre>
+<code>// Write ASCII Art to File
+bool writeToFile(const char *filename, const std::string &content) {
+    std::ofstream file(filename);
+    if (!file.is_open()) return false;
+    file << content;
+    file.close();
+    return true;
+}
+        </section>
+
+        <section id="example" class="example">
+            <h3>Screenshots</h3>
+            <p>Example Triangle Output (Console):</p>
+            <pre>
+               *
+              ***
+             *****
+            </pre>
+            <p>Example Rectangle Output (File):</p>
+            <pre>
+            #####
+            #   #
+            #####
+            </pre>
+
+            </code>
+            </pre>
+
+            <h3>Challenges and Solutions</h3>
+            <ul>
+                <li>
+                    <strong>Managing primitive arrays:</strong> Required careful memory handling and boundary checks.
+                </li>
+                <li>
+                    <strong>Ensuring flexibility:</strong> Designed functions to support console and file outputs.
+                </li>
+                <li>
+                    <strong>File handling:</strong> Implemented robust parsing for command-line arguments.
+                </li>
+            </ul>
+        </section>
+   
+        <section id="result" class="result">
+            <h2>My Result</h2>
+            <div class="image-gallery">
+                <figure>
+                    <img src="images/circle.png" alt="Circle ASCII Art Example">
+                    <figcaption>Circle ASCII Art</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/triangle.png" alt="Triangle ASCII Art Example">
+                    <figcaption>Triangle ASCII Art</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rectangle.png" alt="Rectangle ASCII Art Example">
+                    <figcaption>Rectangle ASCII Art</figcaption>
+                </figure>
+            </div>
+                <h3>Reflection</h3>
+                <p>
+                    This project enhanced my understanding of arrays, control structures, and file I/O in C++.
+                    Designing a reusable library highlighted the importance of modular programming.
+                </p>
+                <p>
+                    View the complete project on my 
+                    <a href="https://github.com/yourusername/ascii-art-library" target="_blank">GitHub repository</a>.
+                </p>
+                
+        </section>
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Soin Kim</p>
+    </footer>
+</body>
+</html>

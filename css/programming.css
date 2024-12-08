@@ -1,0 +1,217 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #fcfcfc;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    display: grid;
+    gap: 20px;
+}
+
+main section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+main section h1 {
+    margin-bottom: 10px;
+}
+
+/* Key and Example sections using grid layout */
+
+.key {
+    display: grid;
+    grid-column: 1 / 2; 
+    gap: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.example {
+    display: grid;
+    grid-column: 2 / 3; 
+    gap: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+pre {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    overflow-x: auto;
+}
+
+/* Lists Styling */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 5px 0;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.image-gallery figure {
+    text-align: center;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+figcaption {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    grid-column: span 2;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 750px) {
+    /* Layout adjustments */
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* Other element adjustments */
+    ul, ol {
+        padding-left: 15px;
+    }
+
+    .project, .example, .Reflection, .result {
+        grid-column: auto;
+        margin-bottom: 20px;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-column: auto;
+        font-size: 0.9rem;
+    }
+
+
+}
+
+@media (min-width: 750px) {
+    body {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto; 
+    }
+
+    main {
+        grid-column: span 2; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, auto); 
+    }
+
+    header {
+        grid-column: span 2; 
+    }
+
+    .project {
+        grid-column: span 2; 
+    }
+
+    .key {
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+    }
+    .example {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+    }
+
+    .result {
+        grid-column: span 2; 
+    }
+}

@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navigation styling */
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Job Experience, Education, and Projects */
+.job, .edu, .project {
+    margin-bottom: 20px;
+}
+
+.job h3, .edu h3, .project h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Skills List */
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+/* Reflection and Additional Content */
+p {
+    margin-bottom: 15px;
+}
+
+#reflection {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-left: 5px solid #3498db;
+    font-style: italic;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 750px) {
+    /* Layout adjustments */
+    body {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+        gap: 15px; 
+    }
+    .main {
+        grid-column: span 1;
+    }
+
+}
+
+
+/* For screens wider than 750px */
+@media (min-width: 750px) {
+    body {
+        grid-template-columns: auto; 
+        grid-template-rows: auto;
+    }
+
+    main {
+        grid-column: 1; 
+    }
+
+
+
+}

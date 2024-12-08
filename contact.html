@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SoinKim</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="programming.html">Programing</a></li>
+                    <li><a href="other.html">Other</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <h2>Contact Us</h2>
+        <form action="mailto:info@smokeysworld.com" method="post" enctype="text/plain">
+            <label for="salutation">Salutation:</label>
+            <select name="salutation" id="salutation">
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+                <option value="mrs">Mrs.</option>
+            </select>
+
+            <br>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required autofocus><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required><br>
+
+            <label for="body">Message:</label>
+            <textarea id="body" name="body" rows="5" required></textarea><br>
+
+            <div class="button-container">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Soin Kim. Connect with me: 
+            <a href="https://www.linkedin.com">LinkedIn</a> | 
+            <a href="https://github.com">GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
